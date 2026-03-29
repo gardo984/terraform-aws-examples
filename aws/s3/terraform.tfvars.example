@@ -1,0 +1,28 @@
+region = "us-east-1"
+tags = {
+  ManagedBy = "terraform"
+}
+buckets = {
+  "0eef4c5f2b" = {
+    name = "0eef4c5f2b",
+    uploads = [
+      "files/airplane1.jpg",
+      "files/airplane2.jpg",
+    ]
+  },
+  "5351c325f5" = {
+    name = "5351c325f5",
+    uploads = [
+      "files/airplane3.jpg",
+      "files/house1.jpg",
+    ]
+  },
+  "1ba63b064a" = {
+    name = "1ba63b064a",
+    uploads = [
+      "files/house2.jpg",
+      "files/house3.jpg",
+      "files/house4.jpg",
+    ]
+  },
+}
