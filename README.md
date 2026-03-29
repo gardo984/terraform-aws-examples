@@ -8,6 +8,13 @@ Some of the services are:
 - S3
 - RDS
 
+## Prerequisites
+
+```sh
+export TF_VAR_access_key=<access-key>
+export TF_VAR_secret_key=<secret-key>
+```
+
 ## Execution Steps
 
 ```sh
