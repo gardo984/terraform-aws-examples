@@ -1,0 +1,23 @@
+region = "<region>"
+instance_type = "<instance_type>"
+ami           = "<ami>"
+ssh_key_path  = "<rsa-file>"
+tags = {
+  ManagedBy = "terraform"
+}
+servers = {
+  web = {
+    web_1 = {
+      static_ip = false,
+      enabled = true,
+    },
+    web_2 = {
+      static_ip = false,
+      enabled = true,
+    },
+    web_3 = {
+      static_ip = false,
+      enabled = true,
+    },
+  }
+}
