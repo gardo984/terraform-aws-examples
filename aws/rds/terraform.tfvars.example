@@ -1,0 +1,31 @@
+region         = "us-east-1"
+instance_class = "db.t4g.micro" # for free tier
+tags = {
+  ManagedBy = "terraform"
+}
+env = "dev"
+
+# free tier allows only 2 db instances
+databases = {
+  db_mysql = {
+    enabled           = true,
+    name              = "dbtest",
+    engine            = "mysql",
+    engine_version    = "8.0.45",
+    allocated_storage = "10",
+  },
+  db_postgres = {
+    enabled           = false,
+    name              = "dbtest",
+    engine            = "postgres",
+    engine_version    = "18.1",
+    allocated_storage = "10",
+  },
+  db_maria = {
+    enabled           = false,
+    name              = "dbtest",
+    engine            = "mariadb",
+    engine_version    = "11.8.3",
+    allocated_storage = "10",
+  },
+}
