@@ -23,6 +23,13 @@ tofu destroy -auto-approve
 ```sh
 tofu output
 ```
+```go
+db_hosts = {
+  "db_mysql" = "<host-mysql>"
+  "db_postgres" = "<host-psql>"
+}
+
+```
 
 ### Additional Commands
 
@@ -43,7 +50,9 @@ aws rds describe-db-engine-versions --engine mariadb --query "*[].{Engine:Engine
 	```
  	- Postgres:
 	```sh
-	
+	curl -o global-bundle.pem https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
+	RDSHOST="<host>" 
+	psql "host=$RDSHOST port=5432 dbname=<db> user=<user> sslmode=verify-full sslrootcert=./global-bundle.pem"
 	```
 
 ### References
